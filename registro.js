@@ -3,13 +3,12 @@ function guardar(){
     let valorRUser = document.getElementById("RUser").value;
     let valorRPass = document.getElementById("RPass").value;
     let valorRCPass = document.getElementById("RCPass").value;
-    let objetoUsuario;
 
     if(valorRPass == valorRCPass){
         valorRUser = valorRUser.trim();
         valorRPass = valorRPass.trim();
 
-        objetoUsuario = {
+        let objetoUsuario = {
             usuario: valorRUser,
             pass: valorRPass
         }
@@ -17,7 +16,7 @@ function guardar(){
         listaUsuarios.push(objetoUsuario);
         console.log(listaUsuarios);
         localStorage.setItem("lista",JSON.stringify(listaUsuarios));
-        window.location.assign("InicioSesion.html")
+        window.location.assign("index.html")
 
         document.getElementById("RUser").value = "";
         document.getElementById("RPass").value = "";
