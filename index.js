@@ -1,15 +1,11 @@
-let listaUsuarios = [];
-let verificarAlmacenamiento = localStorage.getItem('lista');
+let listaUsuarios = localStorage.getItem('lista');
 
-if(verificarAlmacenamiento){
-    listaUsuarios = JSON.parse(verificarAlmacenamiento);
-}
-else{
-    let objeto = {
+if(!listaUsuarios){
+    let user1 = {
         usuario: "User1",
         pass: "1234"
     }
-    listaUsuarios.push(objeto);   
+    listaUsuarios.push(user1);   
 }
 
 localStorage.setItem('lista',JSON.stringify(listaUsuarios));
