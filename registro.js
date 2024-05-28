@@ -7,12 +7,10 @@ function guardar(){
     if(valorRPass == valorRCPass){
         valorRUser = valorRUser.trim();
         valorRPass = valorRPass.trim();
-
         let objetoUsuario = {
             usuario: valorRUser,
             pass: valorRPass
         }
-
         listaUsuarios.push(objetoUsuario);
         console.log(listaUsuarios);
         localStorage.setItem("lista",JSON.stringify(listaUsuarios));
